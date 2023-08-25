@@ -5,20 +5,24 @@
     <title>Snack Jolio - Boutique</title>
     <link rel="icon" href="photo/sac-parachute.png"/> 
     <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <a href="panier.html">
+        <img class="panier" src="photo/panier.png" alt="Votre panier"/>
+    </a>
     <div class="titre">Snack Jolio</div>
     <div class="product">
-        <img class="image" src="photo/chips_lay's_classic.png" alt="Produit 1">
+        <img class="image" src="photo/chips_lay's_classic.png" alt="Chips Lay's Classic">
         <h3>Chips Lay's Classic</h3>
         <p class="price">1.50€</p>
-        <button class="add-to-cart">Ajouter au panier</button>
+        <button class="add-to-cart" data-name="Chips Lay's Classic" data-price="1.50€">Ajouter au panier</button>
     </div>
     <div class="product">
-        <img class="image" src="photo/Barre-céréale-chocolat.png" alt="Produit 1">
+        <img class="image" src="photo/Barre-céréale-chocolat.png" alt="Barre Céréale au Chocolat">
         <h3>Barre Céréale au Chocolat</h3>
         <p class="price">0.50€</p>
-        <button class="add-to-cart">Ajouter au panier</button>
+        <button class="add-to-cart" data-name="Barre Céréale au Chocolat" data-price="0.50€">Ajouter au panier</button>
     </div> 
 </body>

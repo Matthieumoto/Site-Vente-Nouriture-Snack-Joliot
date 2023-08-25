@@ -9,27 +9,42 @@
         font-family: 'Grafton';
         font-size: 34px;
     }
+
     .image {
         max-width: 100px;
     }
+
     .product {
         border: 1px solid #ccc;
         padding: 10px;
         text-align: center;
         margin: 10px;
-      }
+    }
       
-      .price {
+    .price {
         font-weight: bold;
         color: #f00;
-      }
+    }
       
-      .add-to-cart {
+    .add-to-cart {
         background-color: #333;
         color: #fff;
         border: none;
         padding: 5px 10px;
         cursor: pointer;
-      }
+    }
       
+    .panier {
+        float: right;
+        max-width: 40px;
+        margin-left: -50px;
+        margin-right: 10px;
+    }
+
+    .retour {
+        float: left;
+        max-width: 40px;
+        margin-left: 10px;
+        margin-right: -30px;
+    }
 }
