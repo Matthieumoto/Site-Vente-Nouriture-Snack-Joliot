@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Grafton';
+    src: url('font/zt-grafton-regular.ttf') format('truetype');
+}
+
+@media screen and (max-width: 426px) {
+    .titre {
+        text-align: center;
+        font-family: 'Grafton';
+        font-size: 34px;
+    }
+    .image {
+        max-width: 100px;
+    }
+    .product {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+      }
+      
+      .price {
+        font-weight: bold;
+        color: #f00;
+      }
+      
+      .add-to-cart {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      
+}
