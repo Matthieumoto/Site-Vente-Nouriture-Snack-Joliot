@@ -20,10 +20,10 @@ a:hover {
     background-color: orange; /* Couleur de fond orange au survol */
 }
 
-
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 426px) {    
     .lien{
         text-align: center;
+        margin-top: 20px;
     }
     
     .titre {
@@ -33,6 +33,7 @@ a:hover {
     }
     
     .titre1 {
+        margin-top: 20px;
         text-align: center;
         font-family: 'Grafton';
         font-size: 20px;

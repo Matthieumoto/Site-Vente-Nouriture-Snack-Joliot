@@ -5,16 +5,21 @@
     <title>Snack Jolio - Boutique</title>
     <link rel="icon" href="photo/sac-de-livraison.png"/> 
     <link rel="stylesheet" href="style.css"/>
-    <script src="https://www.paypal.com/sdk/js?client-id=AahiLvy2JnKopHte2aaKFpALlUalPi7mvWph63BJ5jdGrnsiA52Bm4ZffnD5_xI2AtVXrN3UL7CwZny0&currency=EUR"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=EUR"></script>
 </head>
 
 <body>
   <div class="titre">Snack Jolio</div>
   
   <div class="lien">
+    <a href=Condition_général.html>Condition Général</a>
+  </div>
+
+  <div class="lien">
     <a href=#Chips>Chips</a>
     <a href=#Barre>Barre Céréale</a>
     <a href=#Gateau>Gâteau</a>
+    <a href=#Chewing_gum>Chewing Gum</a>
   </div>
 
   <div id="Chips" class="titre1">↓ Chips ↓</div>
@@ -133,12 +138,50 @@
     </script>
     </div>
 
+    <div class="product">
+      <img class="image" src="photo/Pringles paprika.png" alt="Pringles Paprika">
+      <h3>Pringles Mini Paprika</h3>
+      <p class="price">4.50€</p>
+      <div id="paypal-button-container15"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '4.85',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container15");
+  </script>
+    </div>
+
     <div id="Barre" class="titre1">↓ Barre Cereale ↓</div>
 
     <div class="product">
         <img class="image" src="photo/Barre-céréale-chocolat.png" alt="Barre Céréale au Chocolat">
         <h3>Barre Céréale au Chocolat</h3>
-        <p class="price">0.50€</p>
+        <p class="price">1€</p>
         <div id="paypal-button-container1"></div>
       <script>
     paypal.Buttons({
@@ -154,7 +197,7 @@
         return actions.order.create({
           purchase_units: [{
             amount: {
-              value: '0.85'
+              value: '1.35'
             }
           }]
         })
@@ -171,6 +214,44 @@
 
     }).render("#paypal-button-container1");
     </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/Coco pops.png" alt="Barre Céréale Coco Pops">
+      <h3>Barre Céréale Coco Pops</h3>
+      <p class="price">6.00€</p>
+      <div id="paypal-button-container9"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '6.35',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container9");
+  </script>
     </div>
 
     <div id="Gateau" class="titre1">↓ Gateau ↓</div>
@@ -249,5 +330,311 @@
 
     }).render("#paypal-button-container5");
     </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/crepes whaou.jpg" alt="Crepes Whaou">
+      <h3>Crepe Whaou</h3>
+      <p class="price">1.00€</p>
+      <div id="paypal-button-container6"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '1.35',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container6");
+  </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/gaffre nature.png" alt="Gaufre Nature">
+      <h3>Gaufre Nature</h3>
+      <p class="price">1.00€</p>
+      <div id="paypal-button-container7"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '1.35',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container7");
+  </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/gauffre chocolat.png" alt="Gaufre Chocolat">
+      <h3>Gaufre Chocolat</h3>
+      <p class="price">1.50€</p>
+      <div id="paypal-button-container8"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '1.85',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container8");
+  </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/Doonuts.png" alt="Doonuts">
+      <h3>Doonuts</h3>
+      <p class="price">1.00€</p>
+      <div id="paypal-button-container10"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '1.35',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container10");
+  </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/Doowap.png" alt="Doowap">
+      <h3>Doowap</h3>
+      <p class="price">6.00€</p>
+      <div id="paypal-button-container11"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '6.35',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container11");
+  </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/Knoppers.jpg" alt="Knoppers">
+      <h3>Knoppers</h3>
+      <p class="price">1.00€</p>
+      <div id="paypal-button-container12"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '1.35',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container12");
+  </script>
+    </div>
+
+    <div id="Chewing_gum" class="titre1">↓ Chewing Gum ↓</div>
+
+    <div class="product">
+      <img class="image" src="photo/chewing gum menthe.png" alt="chewing gum menthe">
+      <h3>Chewing Gum Menthe</h3>
+      <p class="price">6.50€</p>
+      <div id="paypal-button-container13"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '6.85',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container13");
+  </script>
+    </div>
+
+    <div class="product">
+      <img class="image" src="photo/Chewing gum fruit.png" alt="Chewing gum fruit">
+      <h3>Chewing Gum Framboise & Pêche</h3>
+      <p class="price">5.00€</p>
+      <div id="paypal-button-container14"></div>
+    <script>
+  paypal.Buttons({
+
+    style: {
+      layout: 'horizontal',
+      color:  'gold',
+      shape:  'pill',
+      label:  'paypal'
+    },
+
+    createOrder: function(data, actions){
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '5.35',
+          },
+        }],
+      })
+    },
+    onApprouve : function(data, actions) {
+      return actions.order.capture().then(function(details){
+        alert("Transaction accepter : "+ details.payer.name.given_name)
+      })
+    },
+    onError: function(err){
+      console.error('Payment Error :', err);
+      alert('Payment refuser !');
+    }
+
+  }).render("#paypal-button-container14");
+  </script>
     </div>
 </body>
