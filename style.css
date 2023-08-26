@@ -3,15 +3,43 @@
     src: url('font/zt-grafton-regular.ttf') format('truetype');
 }
 
+/* Style de base pour les liens */
+a {
+    display: inline-block;
+    padding: 10px 20px; /* Ajustez les valeurs selon vos préférences */
+    background-color: #fdd663; /* Couleur de fond jaune */
+    color: black; /* Couleur du texte noir */
+    text-decoration: none; /* Pas de soulignement */
+    border: 1px solid rgb(255, 255, 255); /* Bordure noire d'épaisseur 1px */
+    border-radius: 20px; /* Coins arrondis */
+    margin: 5px; /* Marge autour des liens */
+}
+  
+  /* Au survol de la souris */
+a:hover {
+    background-color: orange; /* Couleur de fond orange au survol */
+}
+
+
 @media screen and (max-width: 426px) {
+    .lien{
+        text-align: center;
+    }
+    
     .titre {
         text-align: center;
         font-family: 'Grafton';
         font-size: 34px;
     }
+    
+    .titre1 {
+        text-align: center;
+        font-family: 'Grafton';
+        font-size: 20px;
+    }
 
     .image {
-        max-width: 100px;
+        max-width: 150px;
     }
 
     .product {
