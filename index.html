@@ -5,25 +5,86 @@
     <title>Snack Jolio - Boutique</title>
     <link rel="icon" href="photo/sac-de-livraison.png"/> 
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AahiLvy2JnKopHte2aaKFpALlUalPi7mvWph63BJ5jdGrnsiA52Bm4ZffnD5_xI2AtVXrN3UL7CwZny0&currency=EUR"></script>
 </head>
 
 <body>
-    <a href="panier.html">
-        <img class="panier" src="photo/panier.png" alt="Votre panier"/>
-    </a>
     <div class="titre">Snack Jolio</div>
     <div class="product">
         <img class="image" src="photo/chips_lay's_classic.png" alt="Chips Lay's Classic">
         <h3>Chips Lay's Classic</h3>
         <p class="price">1.50€</p>
-        <button class="add-to-cart" data-name="Chips Lay's Classic" data-price="1.50€">Ajouter au panier</button>
+        <div id="paypal-button-container"></div>
+      <script>
+    paypal.Buttons({
+
+      style: {
+        layout: 'horizontal',
+        color:  'gold',
+        shape:  'pill',
+        label:  'paypal'
+      },
+
+      createOrder: function(data, actions){
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '1.50',
+              name: 'Chips Lays Classic'
+            }
+          }]
+        })
+      },
+      onApprouve : function(data, actions) {
+        return actions.order.capture().then(function(details){
+          alert("Transaction accepter : "+ details.payer.name.given_name)
+        })
+      },
+      onError: function(err){
+        console.error('Payment Error :', err);
+        alert('Payment refuser !');
+      }
+
+    }).render("#paypal-button-container");
+    </script>
     </div>
+
     <div class="product">
         <img class="image" src="photo/Barre-céréale-chocolat.png" alt="Barre Céréale au Chocolat">
         <h3>Barre Céréale au Chocolat</h3>
         <p class="price">0.50€</p>
-        <button class="add-to-cart" data-name="Barre Céréale au Chocolat" data-price="0.50€">Ajouter au panier</button>
-    </div> 
-    <script src="script.js"></script>
+        <div id="paypal-button-container1"></div>
+      <script>
+    paypal.Buttons({
+
+      style: {
+        layout: 'horizontal',
+        color:  'gold',
+        shape:  'pill',
+        label:  'paypal'
+      },
+
+      createOrder: function(data, actions){
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '0.50',
+              name: 'Barre Céréale au Chocolat'
+            }
+          }]
+        })
+      },
+      onApprouve : function(data, actions) {
+        return actions.order.capture().then(function(details){
+          alert("Transaction accepter : "+ details.payer.name.given_name)
+        })
+      },
+      onError: function(err){
+        console.error('Payment Error :', err);
+        alert('Payment refuser !');
+      }
+
+    }).render("#paypal-button-container1");
+    </script>
+    </div>
 </body>
