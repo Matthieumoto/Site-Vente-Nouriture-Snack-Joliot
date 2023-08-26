@@ -29,12 +29,16 @@
         return actions.order.create({
           purchase_units: [{
             amount: {
-              value: '1.50',
-              name: 'Chips Lays Classic'
-            }
-          }]
+              value: '0.10',
+            },
+            items: [
+            {
+              name: 'Chips Nature Classic',
+            }],
+          }],
         })
       },
+        
       onApprouve : function(data, actions) {
         return actions.order.capture().then(function(details){
           alert("Transaction accepter : "+ details.payer.name.given_name)
