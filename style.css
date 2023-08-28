@@ -3,44 +3,42 @@
     src: url('font/zt-grafton-regular.ttf') format('truetype');
 }
 
-/* Style de base pour les liens */
-a {
-    display: inline-block;
-    padding: 10px 20px; /* Ajustez les valeurs selon vos préférences */
-    background-color: #fdd663; /* Couleur de fond jaune */
-    color: black; /* Couleur du texte noir */
-    text-decoration: none; /* Pas de soulignement */
-    border: 1px solid rgb(255, 255, 255); /* Bordure noire d'épaisseur 1px */
-    border-radius: 20px; /* Coins arrondis */
-    margin: 5px; /* Marge autour des liens */
-}
-  
-  /* Au survol de la souris */
-a:hover {
-    background-color: orange; /* Couleur de fond orange au survol */
-}
+@media screen and (max-width: 426px) {
 
-@media screen and (max-width: 426px) {    
-    .lien{
+    .lien {
         text-align: center;
-        margin-top: 20px;
     }
-    
+    /* Style de base pour les liens */
+    a {
+        display: inline-block;
+        padding: 10px 20px; /* Ajustez les valeurs selon vos préférences */
+        background-color: #fbbc04; /* Couleur de fond jaune */
+        color: black; /* Couleur du texte noir */
+        text-decoration: none; /* Pas de soulignement */
+        border: 1px solid rgb(255, 255, 255); /* Bordure noire d'épaisseur 1px */
+        border-radius: 25px; /* Coins arrondis */
+        margin: 5px; /* Marge autour des liens */
+    }
+  
+    /* Au survol de la souris */
+    a:hover {
+        background-color: orange; /* Couleur de fond orange au survol */
+    }
+
     .titre {
         text-align: center;
         font-family: 'Grafton';
         font-size: 34px;
     }
-    
+
     .titre1 {
-        margin-top: 20px;
         text-align: center;
         font-family: 'Grafton';
         font-size: 20px;
     }
 
     .image {
-        max-width: 150px;
+        max-width: 100px;
     }
 
     .product {
@@ -53,21 +51,6 @@ a:hover {
     .price {
         font-weight: bold;
         color: #f00;
-    }
-      
-    .add-to-cart {
-        background-color: #333;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-    }
-      
-    .panier {
-        float: right;
-        max-width: 40px;
-        margin-left: -50px;
-        margin-right: 10px;
     }
 
     .retour {
@@ -93,4 +76,94 @@ a:hover {
         font-size: 16px;
     }
     
+}
+
+@media screen and (min-width: 1023px) {
+    .titre {
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Grafton';
+        font-size: 80px;
+    }
+
+    .lien {
+        text-align: center;
+    }
+
+    /* Style de base pour les liens */
+    a {
+        display: inline-block;
+        padding: 10px 20px; /* Ajustez les valeurs selon vos préférences */
+        background-color: #fbbc04; /* Couleur de fond jaune */
+        color: black; /* Couleur du texte noir */
+        text-decoration: none; /* Pas de soulignement */
+        border: 1px solid rgb(255, 255, 255); /* Bordure noire d'épaisseur 1px */
+        border-radius: 100000px; /* Coins arrondis */
+        margin: 10px; /* Marge autour des liens */
+        font-size: 30px;
+    }
+  
+    /* Au survol de la souris */
+    a:hover {
+        background-color: orange; /* Couleur de fond orange au survol */
+    }
+
+    .titre1 {
+        margin-top: 20px;
+        text-align: center;
+        font-family: 'Grafton';
+        font-size: 60px;
+    }
+
+    .image {
+        max-width: 300px;
+        min-height: 300px;
+    }
+
+    .product {
+        width: calc(50% - 20px); /* Pour créer de l'espace entre les produits */
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .price {
+        font-weight: bold;
+        color: #f00;
+    }
+
+    .retour {
+        float: left;
+        max-width: 40px;
+        margin-left: 10px;
+        margin-right: -30px;
+    }
+
+    .cart-item {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+    }
+    
+    .cart-item-image {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+    }
+    
+    .cart-item-name {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 25px;
+    }
 }
